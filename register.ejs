@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #b46daa;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border 0.3s;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+        border: 1px solid #8f4594;
+        outline: none;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #8f4594;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #cb85d0;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      a {
+        color: #cb85d0;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Register Akun</h2>
+      <form action="/auth/register" method="POST">
+        <label for="username">Nama Admin</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Masukkan nama admin"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Masukkan email admin"
+          required
+        />
+        <label for="password">Kata Sandi</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Masukkan kata sandi"
+          required
+        />
+        <button type="submit">Register</button>
+      </form>
+      <p>Sudah memiliki akun? <a href="/auth/login">Login disini!</a></p>
+    </div>
+  </body>
+</html>

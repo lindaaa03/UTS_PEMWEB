@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #e769c6;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #7da1c5;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        border-color: #8f4594;
+        outline: none;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background-color: #8f4594;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #cb85d0;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+      }
+
+      a {
+        color: #cb85d0;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login akun?</h2>
+      <form action="/auth/login" method="POST">
+        <label for="username">Nama Admin</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Masukkan nama admin"
+          required
+        />
+        <label for="password">Kata Sandi</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Masukkan kata sandi"
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+      <p>Belum memiliki akun? <a href="/auth/register">Daftar disini!</a></p>
+    </div>
+  </body>
+</html>
